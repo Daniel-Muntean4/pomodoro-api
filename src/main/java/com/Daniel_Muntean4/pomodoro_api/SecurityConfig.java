@@ -42,7 +42,7 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource(){
         var config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("https://daniel-muntean4.github.io", "http://localhost:5173"));
+        config.setAllowedOrigins(List.of("https://daniel-muntean4.github.io","http://pomodoro-api-production-9301.up.railway.app","http://localhost:5173"));
         config.setAllowedMethods(List.of("POST", "PUT", "PATCH", "DELETE", "GET", "OPTIONS"));
         config.setAllowedHeaders(List.of("Authorization", "Content-type"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
