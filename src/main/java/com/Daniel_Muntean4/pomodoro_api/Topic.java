@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
-public class Task {
+public class Topic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

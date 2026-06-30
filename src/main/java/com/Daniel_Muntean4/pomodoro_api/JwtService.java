@@ -19,7 +19,7 @@ public class JwtService {
 
     public String generateToken(String subject, List<String> permissions) {
         Date now  = new Date();
-        long expirationMs = 60_000;
+        long expirationMs = 60_000* 60;
         return Jwts.builder()
                 .subject(subject)
                 .claim("permissions", permissions)
