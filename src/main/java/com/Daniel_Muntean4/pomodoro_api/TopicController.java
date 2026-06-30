@@ -15,12 +15,12 @@ public class TopicController {
     public TopicController(TopicRepository topicRepository){
         this.topicRepository= topicRepository;
     }
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<Topic> postTopic(@RequestBody Topic topic){
         Topic saved = topicRepository.save(topic);
         return ResponseEntity.created(URI.create("/api/topics/"+saved.getId())).body(saved);
     }
-    @GetMapping("/")
+    @GetMapping("")
     public List<Topic> getTopics(){
         return topicRepository.findAll();
     }

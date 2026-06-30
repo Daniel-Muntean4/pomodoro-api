@@ -50,7 +50,7 @@ public class SessionController {
                 created(URI.create("/api/sessions/"+saved.id())).body(saved);
     }
     @Operation(summary = "Obtain a page of 15 sessions")
-    @ApiResponse(responseCode = "203", description = "Session retrieved")
+    @ApiResponse(responseCode = "200", description = "Session retrieved")
     @ApiResponse(responseCode = "400", description = "Invalid session data", content = @Content )
     @GetMapping("")
     public Page<SessionResponse> getSessions(

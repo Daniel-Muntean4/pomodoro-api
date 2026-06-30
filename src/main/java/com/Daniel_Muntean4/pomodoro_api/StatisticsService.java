@@ -105,7 +105,7 @@ public class StatisticsService {
     }
 
     Double toMinutes(Double ms) {
-        return (ms == null) ? 0 : ms * 60_000D;
+        return (ms == null) ? 0 : ms / 60_000D;
     }
 
     static List<DailyStudy> lastPeriodDays(List<StartDuration> rows, LocalDate today, ZoneId zone, int daysPeriod) {
@@ -118,7 +118,7 @@ public class StatisticsService {
       List<DailyStudy> dailyStudyList = new ArrayList<>(daysPeriod);
 
         for(int i = daysPeriod-1; i<=0; i--){
-            LocalDate day = LocalDate.now().minusDays(i);
+            LocalDate day = today.minusDays(i);
             dailyStudyList.add(new DailyStudy(day.toString(), dateDuration.getOrDefault(day, 0L) ));
       }
 
