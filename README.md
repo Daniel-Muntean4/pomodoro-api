@@ -32,7 +32,7 @@ Request body:
 ```
 
 **List sessions** (paginated, filterable)
-GET `/api/sessions
+GET `/api/sessions`
 
 Response:
 ```json
