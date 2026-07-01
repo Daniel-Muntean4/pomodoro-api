@@ -32,7 +32,7 @@ Request body:
 ```
 
 **List sessions** (paginated, filterable)
-GET `/api/sessions?topicId=1&page=0&size=15`
+GET `/api/sessions
 
 Response:
 ```json
